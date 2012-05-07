@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>997</width>
+    <height>684</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="spacing">
+     <number>3</number>
+    </property>
+    <property name="margin">
+     <number>3</number>
+    </property>
+    <item>
+     <widget class="QSplitter" name="splitter">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <widget class="QWidget" name="horizontalLayoutWidget">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <property name="spacing">
+         <number>6</number>
+        </property>
+        <property name="margin">
+         <number>1</number>
+        </property>
+        <item>
+         <widget class="QTreeView" name="projectTreeView">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>250</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="sizeIncrement">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Verdana</family>
+            <pointsize>8</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="mouseTracking">
+           <bool>true</bool>
+          </property>
+          <property name="contextMenuPolicy">
+           <enum>Qt::CustomContextMenu</enum>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="rootIsDecorated">
+           <bool>true</bool>
+          </property>
+          <property name="sortingEnabled">
+           <bool>false</bool>
+          </property>
+          <property name="animated">
+           <bool>true</bool>
+          </property>
+          <property name="expandsOnDoubleClick">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTabWidget" name="contentTabPanel">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="baseSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <stylestrategy>PreferDefault</stylestrategy>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string/>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="tabsClosable">
+           <bool>true</bool>
+          </property>
+          <property name="movable">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>997</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionMenuAddProject"/>
+    <addaction name="actionMenuAddSuite"/>
+    <addaction name="actionMenuAddTestCase"/>
+    <addaction name="separator"/>
+    <addaction name="actionMenuOpenFile"/>
+    <addaction name="actionMenuSave"/>
+    <addaction name="actionMenuSaveAs"/>
+    <addaction name="separator"/>
+    <addaction name="actionMenuExit"/>
+   </widget>
+   <widget class="QMenu" name="menuTools">
+    <property name="title">
+     <string>Item</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actionMenuDeleteTreeItem"/>
+    <addaction name="actionMenuItemInformation"/>
+    <addaction name="separator"/>
+    <addaction name="actionMenuRunTestCase"/>
+   </widget>
+   <widget class="QMenu" name="menuReport">
+    <property name="title">
+     <string>Report</string>
+    </property>
+    <addaction name="actionMenuReport"/>
+    <addaction name="actionMenuReportExport"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionMenuAbout"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuTools"/>
+   <addaction name="menuReport"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>22</width>
+     <height>22</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionAddProject"/>
+   <addaction name="actionAddSuite"/>
+   <addaction name="actionAddTestCase"/>
+   <addaction name="separator"/>
+   <addaction name="actionSave"/>
+   <addaction name="actionOpenFile"/>
+   <addaction name="separator"/>
+   <addaction name="actionDeleteTreeItem"/>
+   <addaction name="actionItemInformation"/>
+   <addaction name="separator"/>
+   <addaction name="actionRunTestCase"/>
+   <addaction name="separator"/>
+   <addaction name="actionReport"/>
+   <addaction name="actionReportExport"/>
+   <addaction name="separator"/>
+   <addaction name="actionExit"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionExit">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/resources/door_out.png</normaloff>:/resources/door_out.png</iconset>
+   </property>
+   <property name="text">
+    <string>Quit</string>
+   </property>
+   <property name="iconText">
+    <string>Quit</string>
+   </property>
+   <property name="toolTip">
+    <string>Quit</string>
+   </property>
+   <property name="statusTip">
+    <string>Quit</string>
+   </property>
+  </action>
+  <action name="actionAddProject">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/resources/book_add.png</normaloff>:/resources/book_add.png</iconset>
+   </property>
+   <property name="text">
+    <string>Add Project</string>
+   </property>
+   <property name="statusTip">
+    <string>Add Project</string>
+   </property>
+  </action>
+  <action name="actionAddSuite">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/resources/folder_add.png</normaloff>:/resources/folder_add.png</iconset>
+   </property>
+   <property name="text">
+    <string>Add Suite</string>
+   </property>
+   <property name="toolTip">
+    <string>Add Suite</string>
+   </property>
+   <property name="statusTip">
+    <string>Add Suite</string>
+   </property>
+  </action>
+  <action name="actionAddTestCase">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/resources/page_white_add.png</normaloff>:/resources/page_white_add.png</iconset>
+   </property>
+   <property name="text">
+    <string>Add Test Case</string>
+   </property>
+   <property name="toolTip">
+    <string>Add Test Case</string>
+   </property>
+   <property name="statusTip">
+    <string>Add Test Case</string>
+   </property>
+  </action>
+  <action name="actionDeleteTreeItem">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/resources/cross.png</normaloff>:/resources/cross.png</iconset>
+   </property>
+   <property name="text">
+    <string>Delete Item</string>
+   </property>
+   <property name="iconText">
+    <string>Delete Item</string>
+   </property>
+   <property name="toolTip">
+    <string>Delete Item</string>
+   </property>
+   <property name="statusTip">
+    <string>Delete Item</string>
+   </property>
+  </action>
+  <action name="actionItemInformation">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/resources/information.png</normaloff>:/resources/information.png</iconset>
+   </property>
+   <property name="text">
+    <string>Details</string>
+   </property>
+   <property name="iconText">
+    <string>Details</string>
+   </property>
+   <property name="toolTip">
+    <string>Details</string>
+   </property>
+   <property name="statusTip">
+    <string>Details</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/resources/disk.png</normaloff>:/resources/disk.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+   <property name="statusTip">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionRunTestCase">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/resources/control_play_blue.png</normaloff>:/resources/control_play_blue.png</iconset>
+   </property>
+   <property name="text">
+    <string>Run TestCase</string>
+   </property>
+   <property name="statusTip">
+    <string>Run</string>
+   </property>
+  </action>
+  <action name="actionStopTestCase">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/resources/control_stop_blue.png</normaloff>:/resources/control_stop_blue.png</iconset>
+   </property>
+   <property name="text">
+    <string>Stop TestCase</string>
+   </property>
+  </action>
+  <action name="actionReport">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/resources/report.png</normaloff>:/resources/report.png</iconset>
+   </property>
+   <property name="text">
+    <string>Report</string>
+   </property>
+   <property name="toolTip">
+    <string>Show Report</string>
+   </property>
+  </action>
+  <action name="actionReportExport">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/resources/report_disk.png</normaloff>:/resources/report_disk.png</iconset>
+   </property>
+   <property name="text">
+    <string>Report Export</string>
+   </property>
+   <property name="toolTip">
+    <string>Export Report</string>
+   </property>
+  </action>
+  <action name="actionMenuAddProject">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/resources/book_add.png</normaloff>:/resources/book_add.png</iconset>
+   </property>
+   <property name="text">
+    <string>New Project</string>
+   </property>
+  </action>
+  <action name="actionMenuAddSuite">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/resources/folder_add.png</normaloff>:/resources/folder_add.png</iconset>
+   </property>
+   <property name="text">
+    <string>New Suite</string>
+   </property>
+  </action>
+  <action name="actionMenuAddTestCase">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/resources/page_white_add.png</normaloff>:/resources/page_white_add.png</iconset>
+   </property>
+   <property name="text">
+    <string>New Test Case</string>
+   </property>
+  </action>
+  <action name="actionMenuSave">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/resources/disk.png</normaloff>:/resources/disk.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionMenuSaveAs">
+   <property name="text">
+    <string>Save as...</string>
+   </property>
+  </action>
+  <action name="actionMenuExit">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/resources/door_out.png</normaloff>:/resources/door_out.png</iconset>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionOpenFile">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/resources/folder.png</normaloff>:/resources/folder.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open file</string>
+   </property>
+  </action>
+  <action name="actionMenuDeleteTreeItem">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/resources/cross.png</normaloff>:/resources/cross.png</iconset>
+   </property>
+   <property name="text">
+    <string>Delete</string>
+   </property>
+  </action>
+  <action name="actionMenuItemInformation">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/resources/information.png</normaloff>:/resources/information.png</iconset>
+   </property>
+   <property name="text">
+    <string>Information</string>
+   </property>
+  </action>
+  <action name="actionMenuRunTestCase">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/resources/control_play_blue.png</normaloff>:/resources/control_play_blue.png</iconset>
+   </property>
+   <property name="text">
+    <string>Run</string>
+   </property>
+  </action>
+  <action name="actionMenuStopTestCase">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/resources/control_stop_blue.png</normaloff>:/resources/control_stop_blue.png</iconset>
+   </property>
+   <property name="text">
+    <string>Stop</string>
+   </property>
+  </action>
+  <action name="actionMenuReport">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/resources/report.png</normaloff>:/resources/report.png</iconset>
+   </property>
+   <property name="text">
+    <string>Show report</string>
+   </property>
+  </action>
+  <action name="actionMenuReportExport">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/resources/report_disk.png</normaloff>:/resources/report_disk.png</iconset>
+   </property>
+   <property name="text">
+    <string>Export report</string>
+   </property>
+  </action>
+  <action name="actionMenuAbout">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/resources/help.png</normaloff>:/resources/help.png</iconset>
+   </property>
+   <property name="text">
+    <string>About MQTester</string>
+   </property>
+  </action>
+  <action name="actionMenuOpenFile">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/resources/folder.png</normaloff>:/resources/folder.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open file</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="Resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

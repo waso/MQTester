@@ -1,0 +1,32 @@
+<RCC>
+  <qresource prefix="/">
+    <file>resources/help.png</file>
+    <file>resources/logo.png</file>
+    <file>resources/folder.png</file>
+    <file>resources/report.png</file>
+    <file>resources/report_disk.png</file>
+    <file>resources/control_stop_blue.png</file>
+    <file>resources/disk_multiple.png</file>
+    <file>resources/door_out.png</file>
+    <file>resources/book_add.png</file>
+    <file>resources/control_play_blue.png</file>
+    <file>resources/cross.png</file>
+    <file>resources/disk.png</file>
+    <file>resources/folder_add.png</file>
+    <file>resources/information.png</file>
+    <file>resources/package_add.png</file>
+    <file>resources/play.bmp</file>
+    <file>resources/disk.bmp</file>
+    <file>resources/project_icon.bmp</file>
+    <file>resources/suite_icon.bmp</file>
+    <file>resources/package_add.bmp</file>
+    <file>resources/page_white_add.png</file>
+    <file>resources/cross.bmp</file>
+    <file>resources/folder_add.bmp</file>
+    <file>resources/information.bmp</file>
+  </qresource>
+  <qresource prefix="TestCaseForm">
+    <file>resources/delete.png</file>
+    <file>resources/add.png</file>
+  </qresource>
+</RCC>
